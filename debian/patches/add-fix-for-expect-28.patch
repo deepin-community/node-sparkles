@@ -1,0 +1,37 @@
+Description: fix for expect (jest) >= 28
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1011850
+Forwarded: not-needed
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2022-06-01
+
+--- a/test/exists.js
++++ b/test/exists.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-var expect = require('expect');
++const {expect} = require('expect');
+ 
+ var sparkles = require('../');
+ 
+--- a/test/index.js
++++ b/test/index.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-var expect = require('expect');
++const {expect} = require('expect');
+ 
+ var sparkles = require('../');
+ 
+--- a/test/namespace.js
++++ b/test/namespace.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-var expect = require('expect');
++const {expect} = require('expect');
+ 
+ var EventEmitter = require('events').EventEmitter;
+ 
