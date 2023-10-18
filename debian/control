@@ -5,8 +5,8 @@ Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.deb
 Uploaders: Pirate Praveen <praveen@debian.org>
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
- , jest <!nocheck>
-Standards-Version: 4.6.0
+ , node-expect (>= 28) <!nocheck>
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-sparkles
 Vcs-Git: https://salsa.debian.org/js-team/node-sparkles.git
 Homepage: https://github.com/phated/sparkles
@@ -16,6 +16,7 @@ Rules-Requires-Root: no
 Package: node-sparkles
 Architecture: all
 Depends: ${misc:Depends}
+Multi-Arch: foreign
 Description: Namespaced global event emitter
  Sparkles exports a function that returns a singleton `EventEmitter`.  This EE
  can be shared across your application, whether or not node loads multiple
